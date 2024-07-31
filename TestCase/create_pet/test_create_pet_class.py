@@ -4,7 +4,7 @@ import allure
 from Models.pets import Pet
 
 
-@pytest.mark.run(order=1)
+@pytest.mark.run(order=6)
 class TestCreatePet:
 
     @allure.title(""""

@@ -4,7 +4,7 @@ import allure
 from Models.pets import Pet
 
 
-@pytest.mark.run(order=9)
+@pytest.mark.run(order=20)
 class TestDeletePet:
 
     @allure.title(""""

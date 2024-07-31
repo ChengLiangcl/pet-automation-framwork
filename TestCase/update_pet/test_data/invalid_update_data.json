@@ -4,14 +4,14 @@
     "id": 1,
     "name": "Dogs"
   },
-  "name": "Test_2",
+  "name": "Test_Pet_1_update",
   "photoUrls": [
     "http://example.com/photos/buddy.jpg"
   ],
   "tags": [
     {
       "id": 1,
-      "name": "friendly"
+      "name": 123123123
     }
   ],
   "status": "available"

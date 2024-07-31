@@ -4,7 +4,7 @@ import allure
 from Models.users import User
 
 
-@pytest.mark.run(order=6)
+@pytest.mark.run(order=21)
 class TestDeleteUsers:
     @allure.title(""""
                 Scenario: delete an account

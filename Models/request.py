@@ -8,6 +8,7 @@ def get_method(api):
     }
     # Make the GET request
     response = requests.get(api, headers=headers)
+    print(response.status_code)
     return response.json()
 
 

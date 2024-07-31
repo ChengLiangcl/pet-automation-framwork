@@ -4,7 +4,7 @@ import allure
 from Models.pets import Pet
 
 
-@pytest.mark.run(order=7)
+@pytest.mark.run(order=8)
 class TestUploadImage:
 
     @allure.title(""""
@@ -31,4 +31,4 @@ class TestUploadImage:
     def test_upload_pet_image_non_existent_id(self):
         pet = Pet()
         with pytest.raises(ValueError, match="We can't upload a photo for the pet because ID does not exist"):
-            pet.upload_pet_image(999999999999999999, 'TestCase/update_image/panda.jpg', "This is a good pic")
+            pet.upload_pet_image(996669669, 'TestCase/update_image/panda.jpg', "This is a good pic")
