@@ -1,0 +1,32 @@
+[
+  {
+    "id": 33,
+    "username": "johndoe",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "password": "s3cret",
+    "phone": "+1234567890",
+    "userStatus": 1
+  },
+  {
+    "id": 34,
+    "username": "janedoe",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "janedoe@example.com",
+    "password": "topsecret",
+    "phone": "+0987654321",
+    "userStatus": 2
+  },
+  {
+    "id": 35,
+    "username": "samsmit",
+    "firstName": "Sam",
+    "lastName": "Smith",
+    "email": "samsmit@example.com",
+    "password": "password123",
+    "phone": "+1122334455",
+    "userStatus": 3
+  }
+]
