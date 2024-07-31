@@ -17,8 +17,10 @@ class TestUpdateUser:
             data = json.load(file)
         user = User()
         response = user.update_user(data['username'], data)
-        assert response['code'] == 200
-        assert response['message'] == '5111'
+        status_code = response['status_code']
+        data = response['data']
+        assert status_code == 200
+        assert data['message'] == '5111'
 
     @allure.title(""""
                 Scenario: Get user info after updating
@@ -29,7 +31,7 @@ class TestUpdateUser:
     def test_verify_updated_user_info(self):
         user = User()
         response = user.get_user_by_name('jackie.chan')
-        assert response == {
+        assert response['data'] == {
             "id": 5111,
             "username": "jackie.chan",
             "firstName": "Jackie",

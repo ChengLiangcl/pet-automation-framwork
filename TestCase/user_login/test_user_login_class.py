@@ -19,7 +19,7 @@ class TestUserLogin:
         username = data['username']
         password = data['password']
         response = user.login(username, password)
-        assert response['code'] == 200
+        assert response['status_code'] == 200
 
     @allure.title(""""
                 Scenario: User login

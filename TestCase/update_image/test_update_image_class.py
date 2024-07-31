@@ -16,7 +16,7 @@ class TestUploadImage:
       And the pet will have the photo in the system""")
     def test_upload_image(self):
         pet = Pet()
-        resp = pet.upload_pet_image(1667,
+        resp = pet.upload_pet_image(10,
                                     'TestCase/update_image/panda.jpg',
                                     "This is a good pic")
         assert resp.status_code == 200

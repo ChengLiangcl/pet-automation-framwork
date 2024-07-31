@@ -1,5 +1,6 @@
 import sys
 import os
+import requests
 
 path = sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
@@ -12,13 +13,8 @@ class Pet:
         # Validate the status input
         assert isinstance(status, str), "status must be a string"
         assert status in ['available', 'pending', 'sold'], "status must be 'available', 'pending', or 'sold'"
-        try:
-            resp = requests.get(f'https://petstore.swagger.io/v2/pet/findByStatus?status={status}')
-            return resp.status_code
-
-        except requests.exceptions.RequestException as e:
-            print(f"An error occurred: {e}")
-            return None
+        resp = get_method(f'https://petstore.swagger.io/v2/pet/findByStatus?status={status}')
+        return resp
 
     @staticmethod
     def find_pet_by_id(id):
@@ -34,21 +30,16 @@ class Pet:
     @staticmethod
     def delete_pet(id):
         url = f'https://petstore.swagger.io/v2/pet/{id}'
-        headers = {
-            'accept': 'application/json',
-            'api_key': '1'
-        }
-
-        # Send the DELETE request
-        response = requests.delete(url, headers=headers)
-        return response.status_code
+        response = delete_method(url)
+        return response
 
     @staticmethod
     def update_pet(test_data):
         Pet.validate_pet_data(test_data)
         id = test_data['id']
         resp = get_method(f'https://petstore.swagger.io/v2/pet/{id}')
-        if "message" in resp and resp["message"] == 'Pet not found':
+        data = resp['data']
+        if "message" in data and data["message"] == 'Pet not found':
             raise ValueError("We can't update info for the pet because ID does not exist")
 
         resp = post_method("https://petstore.swagger.io/v2/pet", test_data)
@@ -57,7 +48,8 @@ class Pet:
     @staticmethod
     def upload_pet_image(pet_id, image_path, additional_metadata):
         resp = get_method(f'https://petstore.swagger.io/v2/pet/{pet_id}')
-        if "message" in resp and resp["message"] == 'Pet not found':
+        message = resp['data']
+        if "message" in message and message["message"] == 'Pet not found':
             raise ValueError("We can't upload a photo for the pet because ID does not exist")
 
         url = f"https://petstore.swagger.io/v2/pet/{pet_id}/uploadImage"
@@ -69,8 +61,6 @@ class Pet:
         data = {
             'additionalMetadata': additional_metadata
         }
-
-        # Perform the POST request
         response = requests.post(url, headers={'accept': 'application/json'}, files=files, data=data)
 
         return response

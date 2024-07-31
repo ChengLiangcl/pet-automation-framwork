@@ -14,8 +14,9 @@ class TestDeletePet:
     Then the pet is deleted successfully""")
     def test_delete_pet_with_valid_id(self):
         pet = Pet()
-        resp = pet.delete_pet(1667)
-        assert resp == 200
+        resp = pet.delete_pet(10)
+        status_code = resp['status_code']
+        assert status_code == 200
 
     @allure.title(""""
         Attempt to delete a pet that does not exist
@@ -26,4 +27,5 @@ class TestDeletePet:
     def test_delete_pet_with_non_exist_data(self):
         pet = Pet()
         resp = pet.delete_pet(5555555)
-        assert resp == 404
+        status_code = resp['status_code']
+        assert status_code == 404

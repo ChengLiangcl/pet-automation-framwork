@@ -61,23 +61,15 @@ class User:
 
     @staticmethod
     def delete_user(user_name):
-
         url = f"https://petstore.swagger.io/v2/user/{user_name}"
-        headers = {
-            "accept": "application/json"
-        }
-        response = requests.delete(url, headers=headers)
-        return response.status_code
+        response = delete_method(url)
+        return response
 
     @staticmethod
     def update_user(user_name, update_data):
         url = f'https://petstore.swagger.io/v2/user/{user_name}'
-        headers = {
-            'accept': 'application/json',
-            'Content-Type': 'application/json',
-        }
-        response = requests.put(url, headers=headers, json=update_data)
-        return response.json()
+        response = put_method(url, update_data)
+        return response
 
     @staticmethod
     def validate_user_data(data):
@@ -109,14 +101,14 @@ class User:
         headers = {
             'Accept': 'application/json'
         }
-        user_info = User.get_user_by_name(username)
+        user_info = User.get_user_by_name(username)['data']
 
         if 'type' in user_info:
             raise ValueError('username does not exist in the database, please create an account first')
         else:
             if user_info['password'] == password and user_info['username'] == username:
-                response = requests.get(api, headers=headers)
-                return response.json()
+                response = get_method(api)
+                return response
 
             else:
                 raise ValueError('Password was incorrect, please try it again')
@@ -124,11 +116,8 @@ class User:
     @staticmethod
     def logout():
         api = f'https://petstore.swagger.io/v2/user/logout'
-        headers = {
-            'Accept': 'application/json'
-        }
-        response = requests.get(api, headers=headers)
-        return response.json()
+        response = get_method(api)
+        return response
 
     @staticmethod
     def bulk_create_users_with_array(user_list):
@@ -136,7 +125,7 @@ class User:
         for user in user_list:
             User.validate_user_data(user)
         response = post_method('https://petstore.swagger.io/v2/user/createWithArray', user_list)
-        response.json()
+        return  response
 
     @staticmethod
     def bulk_create_users_with_list(user_list):
