@@ -17,8 +17,9 @@ class TestCreatePet:
         with open('TestCase/create_pet/test_data/pet_data.json', 'r') as file:
             data = json.load(file)
         response = pet.add_pet(data)
-        response['id'] = 1667
-        response['category']['name'] = 'Test_Pet_1'
+        data = response['data']
+        data['id'] = 10
+        data['category']['name'] = 'Test_Pet_1'
 
     @allure.title(""""
       Scenario: Add a pet with invalid data to the store

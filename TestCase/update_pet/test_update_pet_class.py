@@ -18,7 +18,7 @@ class TestUpdatePet:
         pet = Pet()
         with open('TestCase/update_pet/test_data/valid_update_data.json', 'r') as file:
             data = json.load(file)
-        response = pet.update_pet(data)
+        response = pet.update_pet(data)['data']
         assert response['name'] == data['name']
 
     @allure.title(""""
@@ -35,19 +35,6 @@ class TestUpdatePet:
             pet.update_pet(data)
 
     @allure.title("""
-         Scenario: Attempt to update a pet that does not exist
-         Given the user is logged in
-         When the user sends a request to update a pet with an invalid ID
-         Then the update fails
-         And the user receives an error message indicating the pet was not found""")
-    def test_update_non_exist_pet(self):
-        pet = Pet()
-        with open('TestCase/update_pet/test_data/non_exist_pet.json', 'r') as file:
-            data = json.load(file)
-        with pytest.raises(ValueError, match="We can't update info for the pet because ID does not exist"):
-            pet.update_pet(data)
-
-    @allure.title("""
         Scenario Update a pet with missing required fields
         Given the user is logged in
         When the user sends a request to update a pet with missing required fields
@@ -59,3 +46,16 @@ class TestUpdatePet:
             data = json.load(file)
             with pytest.raises(AssertionError, match="id field is missing"):
                 pet.update_pet(data)
+
+    @allure.title("""
+         Scenario: Attempt to update a pet that does not exist
+         Given the user is logged in
+         When the user sends a request to update a pet with an invalid ID
+         Then the update fails
+         And the user receives an error message indicating the pet was not found""")
+    def test_update_non_exist_pet(self):
+        pet = Pet()
+        with open('TestCase/update_pet/test_data/non_exist_pet.json', 'r') as file:
+            data = json.load(file)
+        with pytest.raises(ValueError, match="We can't update info for the pet because ID does not exist"):
+            pet.update_pet(data)

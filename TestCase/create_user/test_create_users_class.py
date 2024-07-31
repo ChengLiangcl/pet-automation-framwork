@@ -18,8 +18,10 @@ class TestCreateUsers:
             data = json.load(file)
         user = User()
         response = user.create_user(data)
-        assert response['code'] == 200
-        assert response['message'] == '119'
+        user_data = response['data']
+        status_code = response['status_code']
+        assert status_code == 200
+        assert user_data['message'] == '119'
 
     @allure.title(""""
                 Scenario: Create a new user account 
@@ -71,7 +73,7 @@ class TestCreateUsers:
             data = json.load(file)
             user = User()
             with pytest.raises(ValueError, match="The username already exists"):
-                if user.get_user_by_name(data['username'])['username'] == data['username']:
+                if user.get_user_by_name(data['username'])['data']['username'] == data['username']:
                     raise ValueError('The username already exists')
 
     @allure.title("Create a new user named jackie chan")
@@ -80,8 +82,10 @@ class TestCreateUsers:
             data = json.load(file)
         user = User()
         response = user.create_user(data)
-        assert response['code'] == 200
-        assert response['message'] == '5111'
+        user_data = response['data']
+        status_code = response['status_code']
+        assert status_code == 200
+        assert user_data['message'] == '5111'
 
     @allure.title(""""
                 Given the user is not logged in
@@ -94,7 +98,8 @@ class TestCreateUsers:
             data = json.load(file)
             user = User()
             response = user.bulk_create_users_with_list(data)
-            assert response['code'] == 200
+            status_code = response['status_code']
+            assert status_code == 200
 
     def test_list_new_created_users(self):
         with open('TestCase/create_user/test_data/bulk_upload_user.json', 'r') as file:
@@ -105,13 +110,16 @@ class TestCreateUsers:
 
             user = User()
             resp = user.get_user_by_name(user_name_one)
-            assert user_name_one == resp['username']
+            data = resp['data']
+            assert user_name_one == data['username']
 
             resp = user.get_user_by_name(user_name_two)
-            assert user_name_two == resp['username']
+            data = resp['data']
+            assert user_name_two == data['username']
 
             resp = user.get_user_by_name(user_name_three)
-            assert user_name_three == resp['username']
+            data = resp['data']
+            assert user_name_three == data['username']
 
     @allure.title(""""
                 Given the user is not logged in
@@ -125,4 +133,3 @@ class TestCreateUsers:
             user = User()
             with pytest.raises(ValueError, match="id should be of type int, but got str"):
                 user.bulk_create_users_with_list(data)
-

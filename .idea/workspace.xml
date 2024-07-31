@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc9b17d4-298b-4c5e-af9c-72c8be48fe41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/get_inventory/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/get_inventory/test_get_inventory_class.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/get_order_by_order_id/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestCase/get_order_by_order_id/test_get_order_by_id.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/store.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/create_pet/test_create_pet_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/create_pet/test_create_pet_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/create_pet/test_data/pet_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/create_pet/test_data/pet_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/delete_pet/test_delete_pet.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/delete_pet/test_delete_pet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/find_pet_by_status/test_find_pet_by_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/find_pet_by_status/test_find_pet_by_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/update_image/test_update_image_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/update_image/test_update_image_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/update_pet/test_data/valid_update_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/update_pet/test_data/valid_update_data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "store-model",
-    "last_opened_file_path": "/Users/bytedance/Desktop/PetStroeAPIAutomation/TestCase/find_pet_by_status",
+    "last_opened_file_path": "/Users/bytedance/Desktop/pet-store-automation-test-cases/TestCase/get_order_by_order_id",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,11 +60,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TestCase/get_order_by_order_id" />
+      <recent name="$PROJECT_DIR$/TestCase/get_inventory" />
       <recent name="$PROJECT_DIR$/TestCase/find_pet_by_status" />
       <recent name="$PROJECT_DIR$/TestCase/update_image" />
       <recent name="$PROJECT_DIR$/TestCase/update_user" />
-      <recent name="$PROJECT_DIR$/TestCase/user_login" />
-      <recent name="$PROJECT_DIR$/TestCase/user_logout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TestCase/update_image" />
@@ -79,6 +90,7 @@
       <workItem from="1722257991894" duration="663000" />
       <workItem from="1722259007849" duration="5665000" />
       <workItem from="1722310111450" duration="35225000" />
+      <workItem from="1722401737022" duration="4521000" />
     </task>
     <servers />
   </component>

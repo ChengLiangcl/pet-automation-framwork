@@ -15,5 +15,5 @@ class TestUserLogout:
     def test_user_log_out(self):
         user = User
         response = user.logout()
-        assert response['code'] == 200
+        assert response['status_code'] == 200
 

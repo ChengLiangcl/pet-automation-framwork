@@ -18,8 +18,8 @@ class TestDeleteUsers:
             data = json.load(file)
         user = User()
         response = user.delete_user(data['username'])
-        print(response)
-        assert response == 200
+        status_code = response['status_code']
+        assert status_code == 200
 
     @allure.title(""""
                  Scenario: delete an account
@@ -33,4 +33,5 @@ class TestDeleteUsers:
             data = json.load(file)
         user = User()
         response = user.delete_user(data)
-        assert response == 404
+        status_code = response['status_code']
+        assert status_code == 404

@@ -17,7 +17,7 @@ class TestGetUserClass:
             data = json.load(file)
         user = User()
         response = user.get_user_by_name(data['username'])
-        assert response == {
+        assert response['data'] == {
             "id": 119,
             "username": "jason.liang",
             "firstName": "Jason",
@@ -39,6 +39,7 @@ class TestGetUserClass:
             data = json.load(file)
         user = User()
         response = user.get_user_by_name(data['invalid_username'])
-        assert response['code'] == 1
-        assert response['type'] == "error"
-        assert response['message'] == "User not found"
+        data = response['data']
+        assert data['code'] == 1
+        assert data['type'] == "error"
+        assert data['message'] == "User not found"
