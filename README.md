@@ -1,6 +1,7 @@
 # PetStore Automation Framework
 
 This project provides automated testing for the **PetStore API** using **Python** and **pytest**.
+**There is no validation for any of the APIs**, so regardless of the data you provide, it will always return a successful response for some APIs. There are many negative cases, but I have not written all of them.
 
 ## Prerequisites
 
@@ -51,3 +52,5 @@ pytest store_test_case\test_store_positive.py
 pytest store_test_case\test_store_negative_cases.py
 pytest pet_test_case\test_pet_positive_case.py
 pytest pet_test_case\test_negative_case.py
+
+
