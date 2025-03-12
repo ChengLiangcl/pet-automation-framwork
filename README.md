@@ -38,7 +38,7 @@ Follow these steps to pull the code and set up the environment:
    pip install -r requirements.txt
 5. Checkout to JasonChengLiang-CBATest branch
     ``` bash
-    git checkout JasonChengLiang-CBATest
+    git checkout feature/JasonChengLiang-CBATest
    
 6. under root directory command to run all the test cases
     ```bash
