@@ -18,10 +18,14 @@ Follow these steps to pull the code and set up the environment:
    ```bash
    git clone https://github.com/ChengLiangcl/pet-automation-framwork.git
 3. Navigate into the project directory:
-   cd pet-automation-framwork
+   ```bash
+   cd pet-automation-framework
+
 4. Install the necessary dependencies from the requirements.txt file:
+    ```bash
    pip install -r requirements.txt
-5. under root directory
-   run pytest to run all the test cases
+6. under root directory command to run all the test cases
+    ```bash
+    pytest 
 
 
