@@ -30,9 +30,13 @@ Follow these steps to pull the code and set up the environment:
 
 ## I would suggest running the test cases separately. It's strange that when running all the test cases together with the pytest command, some cases pass, but others fail. Please follow the instructions below to run each test case separately.
 
-For Windows:
-bash
-Copy
+## I would suggest running the test cases separately. It's strange that when running all the test cases together with the pytest command, some cases pass, but others fail. Please follow the instructions below to run each test case separately.
+
+## Running Test Cases Separately
+To ensure accurate results, it is recommended to run the test cases separately. Below are the commands for running each test case individually.
+
+### For Windows
+```bash
 pytest user_test_case\test_user_api_positive.py
 pytest user_test_case\test_user_api_negative.py
 pytest store_test_case\test_store_positive.py
@@ -40,14 +44,11 @@ pytest store_test_case\test_store_negative_cases.py
 pytest pet_test_case\test_pet_positive_case.py
 pytest pet_test_case\test_negative_case.py
 
-For Macs
+### For macs
+```bash
 pytest user_test_case/test_user_api_positive.py
 pytest user_test_case/test_user_api_negative.py
 pytest store_test_case/test_store_positive.py
 pytest store_test_case/test_store_negative_cases.py
 pytest pet_test_case/test_pet_positive_case.py
 pytest pet_test_case/test_negative_case.py
-
-
-
-
