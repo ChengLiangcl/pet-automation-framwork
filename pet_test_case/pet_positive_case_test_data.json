@@ -1,0 +1,21 @@
+{
+    "create_pet_data":
+        {
+            "id": 911119,
+            "category": {
+              "id": 99584,
+              "name": "Pet1"
+            },
+            "name": "Molly",
+            "photoUrls": [
+              "https://gitlab.com/assets/illustrations/empty-state/empty-activity-md-9368030d093521900152c5eb08ab63f4c37c919587e6638bb996cc217a27ca30.svg"
+            ],
+            "tags": [
+              {
+                "id": 5500,
+                "name": "Special"
+              }
+            ],
+            "status": "available"
+          }
+}

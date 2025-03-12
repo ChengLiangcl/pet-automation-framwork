@@ -1,0 +1,35 @@
+{
+    "create_user_data":{
+        "id": 845454,
+        "username": "jason.liang.cheng",
+        "firstName": "jason",
+        "lastName": "liang",
+        "email": "jason.liang@cba.com",
+        "password": "1456789",
+        "phone": "04035465465465",
+        "userStatus": 0
+      },
+
+      "create_user_with_list":[
+        {
+            "id": 7123123,
+            "username": "testing.user",
+            "firstName": "testing",
+            "lastName": "user",
+            "email": "testing.user@cba.com",
+            "password": "545647",
+            "phone": "89789121564",
+            "userStatus": 0
+        },
+        {
+            "id":  512312313,
+            "username": "testing.checking",
+            "firstName": "testing",
+            "lastName": "checking",
+            "email": "testing.checking@cba.com",
+            "password": "123214",
+            "phone": "68787825",
+            "userStatus": 0
+        }
+      ]
+}
