@@ -42,7 +42,7 @@ Follow these steps to pull the code and set up the environment:
 
 ## Running Test Cases Separately
 
-To ensure accurate results, it is recommended to run the test cases separately. Below are the commands for running each test case individually.
+To ensure accurate results, it is recommended to run the test cases separately. Below are the commands for running each test case individually. I would suggest running the test cases separately. It's strange that when running all the test cases together with the pytest command, some cases pass, but others fail. Please follow the instructions below to run each test case separately.
 
 ### For Windows(\) and Macs(/)
 ```bash
