@@ -26,6 +26,8 @@ Follow these steps to pull the code and set up the environment:
    pip install -r requirements.txt
 6. under root directory command to run all the test cases
     ```bash
-    pytest 
+    pytest
+
+#There is no validation for any of the APIs, so regardless of the data you provide, some APIs will always return a success response. There are many negative cases, but I did not write them all.
 
 
