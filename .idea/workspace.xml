@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc9b17d4-298b-4c5e-af9c-72c8be48fe41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TestCase/get_inventory/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestCase/get_inventory/test_get_inventory_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestCase/get_order_by_order_id/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestCase/get_order_by_order_id/test_get_order_by_id.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/store.py" beforeDir="false" afterPath="$PROJECT_DIR$/Models/store.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestCase/create_pet/test_create_pet_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/create_pet/test_create_pet_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/create_pet/test_data/pet_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/create_pet/test_data/pet_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/delete_pet/test_delete_pet.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/delete_pet/test_delete_pet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/find_pet_by_status/test_find_pet_by_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/find_pet_by_status/test_find_pet_by_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/update_image/test_update_image_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/update_image/test_update_image_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCase/update_pet/test_data/valid_update_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/update_pet/test_data/valid_update_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/get_user/test_get_user_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/get_user/test_get_user_class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,27 +28,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in test_create_pet_class.py.executor": "Run",
-    "Python tests.Python tests in test_create_users_class.py.executor": "Run",
-    "Python.conftest.executor": "Run",
-    "Python.generate_init_file.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.users.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "store-model",
-    "last_opened_file_path": "/Users/bytedance/Desktop/pet-store-automation-test-cases/TestCase/get_order_by_order_id",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in test_create_pet_class.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_create_users_class.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.conftest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_init_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.users.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bytedance/Desktop/pet-store-automation-test-cases/TestCase/get_order_by_order_id&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TestCase/get_order_by_order_id" />
@@ -91,6 +82,7 @@
       <workItem from="1722259007849" duration="5665000" />
       <workItem from="1722310111450" duration="35225000" />
       <workItem from="1722401737022" duration="4521000" />
+      <workItem from="1722911762799" duration="5064000" />
     </task>
     <servers />
   </component>

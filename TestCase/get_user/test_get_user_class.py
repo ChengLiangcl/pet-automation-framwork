@@ -17,6 +17,7 @@ class TestGetUserClass:
             data = json.load(file)
         user = User()
         response = user.get_user_by_name(data['username'])
+        print(response)
         assert response['data'] == {
             "id": 119,
             "username": "jason.liang",
