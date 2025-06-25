@@ -1,0 +1,12 @@
+{
+
+    "test_create_user_missing_id_field":{
+        "username": "jason.liang.cheng",
+        "firstName": "jason",
+        "lastName": "liang",
+        "email": "jason.liang@cba.com",
+        "password": "1456789",
+        "phone": "04035465465465",
+        "userStatus": 0
+    }
+}
